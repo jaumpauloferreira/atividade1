@@ -1,0 +1,27 @@
+{
+  "name": "atividade1",
+  "version": "1.0.0",
+  "description": "Vendas de ingressos online",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaumpauloferreira/atividade1.git"
+  },
+  "keywords": [
+    "nodejs",
+    "javascript",
+    "express",
+    "programação"
+  ],
+  "author": "João Paulo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jaumpauloferreira/atividade1/issues"
+  },
+  "homepage": "https://github.com/jaumpauloferreira/atividade1#readme"
+}
