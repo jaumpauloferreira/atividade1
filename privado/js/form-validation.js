@@ -4,7 +4,7 @@
 //---------------------------- 1 - Primeira Validação e uso de máscara  (RG) -------------------------------
 
 
-
+/*
 // Função para formatar o RG enquanto o usuário digita
     function formatarRG(rg) {
         rg = rg.replace(/\D/g, ''); // Remove caracteres não numéricos
@@ -249,4 +249,4 @@
 
 
 
-
+*/

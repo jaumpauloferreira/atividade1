@@ -4,8 +4,8 @@ import path from "path";
 import session from "express-session";
 import autenticar from "./segurança/autenticar.js";
 
-const host = "0.0.0.0";
-const porta = 3000;
+const host = '0.0.0.0';
+const porta = 4000;
 
 const app = express();
 
@@ -27,7 +27,7 @@ app.post("/login", (requisicao, resposta) => {
   const senha = requisicao.body.senha;
   if (usuario && senha && usuario === "Jaum" && senha === "123") {
     requisicao.session.usuarioLogado = true;
-    resposta.redirect("/ticket.html");
+    resposta.redirect("cadastroEvento.html");
   } else {
     resposta.redirect("/login.html");
   }

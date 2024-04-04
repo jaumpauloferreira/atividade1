@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/jaumpauloferreira/atividade1#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.19.1",
     "express-session": "^1.18.0"
   }
