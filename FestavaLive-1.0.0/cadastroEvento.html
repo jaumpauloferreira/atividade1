@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
@@ -17,19 +17,22 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/bootstrap-icons.css" rel="stylesheet">
     <link href="css/templatemo-festava-live.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    
 </head>
+
+<style>
+    .form-label {
+        color: white; /* Define a cor do texto como branco */
+    }
+
+</style>
+
+
 
 <body>
     <main>
         <header class="site-header">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12 col-12 d-flex flex-wrap">
-                        <p class="d-flex me-4 mb-0">
-                            <i class="bi-person custom-icon me-2"></i>
-                            <strong class="text-dark">Bem-vindo ao Festival de Música 2023</strong>
-                        </p>
-                    </div>
                 </div>
             </div>
         </header>
@@ -40,7 +43,7 @@
                     Festival ao vivo
                 </a>
 
-                <a href="cadastroCliente.html" class="btn custom-btn d-lg-none ms-auto me-4">Buy Ticket</a>
+                <a href="cadastroEvento.html" class="btn custom-btn d-lg-none ms-auto me-4">Buy Ticket</a>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -76,73 +79,87 @@
         <section class="ticket-section section-padding">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-6 col-10 mx-auto">
-                        <form class="custom-form ticket-form mb-5 mb-lg-0" action="#" method="post" role="form"
-                            id="band-registration-form" onsubmit="return validateForm()">
-                            <h2 class="text-center mb-4">Cadastro</h2>
-                            <div class="ticket-form-body">
-                                <div class="mb-3">
-                                    <input type="text" name="band-name" id="band-name" class="form-control"
-                                        placeholder="Nome" required>
-                                    <span id="error-band-name" class="error-message"></span>
+                    <div class="col-lg-6 col-10 mx-auto">       
+                        <form id="formEvento" method="POST" action="#" class="row g-3 needs-validation" novalidate>
+                           <div class="col-md-2">
+                            <label for="nome" class="form-label">Codigo:</label>
+                                <input type="text" class="form-control" id="codigo" name="codigo" value="" required disabled>
+                                <div class="invalid-feedback">
+                                    Por favor, informe o seu codigo.
                                 </div>
-
-                                <div class="mb-3">
-                                    <input type="email" name="band-email" id="band-email" class="form-control"
-                                        placeholder="E-mail" required>
-                                    <span id="error-band-email" class="error-message"></span>
+                           </div>
+                            <div class="col-md-6">
+                                <label for="nome" class="form-label">Nome:</label>
+                                <input type="text" class="form-control" id="nome" name="nome" value="" required>
+                                <div class="invalid-feedback">
+                                    Por favor, informe o seu nome.
                                 </div>
-
-                                <div class="mb-3">
-                                    <input type="tel" class="form-control" name="band-phone" id="band-phone"
-                                        placeholder="Telefone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
-                                    <span id="error-band-phone" class="error-message"></span>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="email" class="form-label">Email:</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                                <div class="invalid-feedback">
+                                    Por favor, informe o email.
                                 </div>
-
-                                <div class="mb-3">
-                                    <input type="text" name="band-rg" id="band-rg" class="form-control"
-                                        placeholder="RG" required>
-                                    <span id="error-band-rg" class="error-message"></span>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="telefone" class="form-label">Telefone:</label>
+                                <input type="text" class="form-control" id="telefone" name="telefone" required>
+                                <div class="invalid-feedback">
+                                    Por favor, informe o telefone.
                                 </div>
-
-                                <div class="mb-3">
-                                    <input type="text" name="band-cpf" id="band-cpf" class="form-control"
-                                        placeholder="CPF" required>
-                                    <span id="error-band-cpf" class="error-message"></span>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="rg" class="form-label">RG:</label>
+                                <input type="text" class="form-control" id="rg" name="rg" required>
+                                <div class="invalid-feedback">
+                                    Por favor, informe o RG.
                                 </div>
-
-                                <div class="mb-3">
-                                    <input type="text" name="band-address" id="band-address" class="form-control"
-                                        placeholder="Endereço" required>
-                                    <span id="error-band-address" class="error-message"></span>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="cpf" class="form-label">CPF:</label>
+                                <input type="text" class="form-control" id="cpf" name="cpf" value="" required>
+                                <div class="invalid-feedback">
+                                    Por favor, informe o CPF!
                                 </div>
-
-                                <div class="mb-3">
-                                    <label for="ticket-quantity">Quantidade de Ingressos</label>
-                                    <input type="number" name="ticket-quantity" id="ticket-quantity"
-                                        class="form-control" min="1" value="1" required>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="endereco" class="form-label">Endereço:</label>
+                                <input type="text" class="form-control" id="endereco" name="endereco" value="" required>
+                                <div class="invalid-feedback">
+                                    Por favor, informe o endereço!
                                 </div>
-
-                                <div class="mb-3">
-                                    <label for="ticket-total">Valor</label>
-                                    <input type="text" name="ticket-total" id="ticket-total" class="form-control"
-                                        readonly>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="ticket-quantity" class="form-label">Qt. de Ingressos:</label>
+                                <input type="number" class="form-control" id="ingressos" name="ticket-quantity" min="1" value="1" required>
+                                <div class="invalid-feedback">
+                                    Por favor, informe a quantidade de ingressos.
                                 </div>
-
-                                <div class="mb-3">
-                                    <label for="band-agreement">
-                                        Concordo com os termos e condições
-                                        <input type="checkbox" name="band-agreement" id="band-agreement" required>
-                                    </label>
-                                    <span id="error-band-agreement" class="error-message"></span>
-                                </div>
-
-                                <div class="col-lg-4 col-md-10 col-8 mx-auto">
-                                    <button type="button" class="form-control">Cadastrar</button>
-                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="ticket-total" class="form-label">Valor:</label>
+                                <input type="text" class="form-control" id="valor" name="ticket-total" readonly>
+                            </div>
+                            <div class="col-12">
+                                <button class="btn btn-primary" id='cadastrar' type="submit">Cadastrar</button>
+                                <button class="btn btn-warning" id='atualizar' type="button">Atualizar</button>
+                                <button class="btn btn-danger" id='excluir' type="button">Excluir</button>
+                                <button class="btn btn-secondary" type="button" onclick="history.back()">Voltar</div>
+                            </div>
                         </form>
-                        <div id="mensagemSucesso" style="display: none;">Cadastro realizado com Sucesso</div>
-                        <div id="mensagemErro" style="display: none;">Por favor, preencha todos os campos corretamente.
+
+                        <div class="container" id="mensagem">
+
+                        </div>
+                        <br>
+                        <div id="espacoTabela">
+
+
+                        </div>
+
+                        
+
                         </div>
                     </div>
                 </div>
@@ -222,15 +239,12 @@ T e m p l a t e M o
     <script src="js/jquery.sticky.js"></script>
     <script src="js/custom.js"></script>
     <script src="js/form-validation.js"></script>
-    <script>
-        // Adicione o script JavaScript aqui para calcular o valor total com base na quantidade de ingressos
-        document.getElementById('ticket-quantity').addEventListener('input', function () {
-            var ticketQuantity = parseInt(this.value);
-            var ticketPrice = 10; // Preço do ingresso (definido como exemplo)
-            var totalPrice = ticketQuantity * ticketPrice;
-            document.getElementById('ticket-total').value = totalPrice.toFixed(2); // Exibindo o valor total com duas casas decimais
-        });
-    </script>
+
+    <!------------- Script para o Cadastro ------------>
+    <script src="./scriptss/scriptssEvento.js"></script>   
+
+
+    
 </body>
 
 </html>

@@ -89,7 +89,7 @@ function exibirTabelaEventos(listaEventos) {
   espacoTabela.innerHTML = '';
   if (listaEventos.length > 0) {
     const tabela = document.createElement('table');
-    tabela.className ='table table-striped table-hover';
+    tabela.className ='table table-dark table-striped';
     const cabecalho = document.createElement('thead');
     cabecalho.innerHTML = `
             <tr>
