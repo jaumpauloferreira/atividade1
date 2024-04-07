@@ -91,3 +91,23 @@ margin-left: 4px;
 #cadastrar {
     color:rgb(250, 175, 36)
 }
+
+#espacoTabela {
+    
+    max-height: calc(100vh - 400px); /* Definir altura máxima da tabela como 100% da altura da viewport menos a altura do cabeçalho e do rodapé */
+    display: flex;
+    justify-content: center;
+}
+
+#container {
+    display: flex; /* Usar flexbox para layout */
+    flex-direction: column; /* Dispor os elementos em coluna */
+    min-height: calc(100vh - 100px); /* Definir altura mínima do contêiner como 100% da altura da viewport menos a altura do rodapé */
+}
+
+body {
+    min-height: 100vh; /* Definir altura mínima da página como 100% da altura da viewport */
+    margin: 0; /* Remover margens padrão do body */
+    display: flex; /* Usar flexbox para layout */
+    flex-direction: column; /* Dispor os elementos em coluna */
+}
