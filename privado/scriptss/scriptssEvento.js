@@ -252,3 +252,11 @@ function obterEventoDoFormulario(tipoOperacao) {
 
   return evento;
 }
+
+// Validação de ingressos e cálculo do valor
+document.getElementById("ingressos").addEventListener("input", function () {
+  var ticketQuantity = parseInt(this.value);
+  var ticketPrice = 10; // Preço do ingresso
+  var totalPrice = ticketQuantity * ticketPrice;
+  document.getElementById("valor").value = totalPrice.toFixed(2);
+});
